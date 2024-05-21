@@ -32,6 +32,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/ProductAngularPWA/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
