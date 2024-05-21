@@ -1,0 +1,11 @@
+<div class="product-list">
+  <div class="product-item" *ngFor="let product of products">
+    <p class="product-details">{{ product.name }} - ${{ product.price }} - Quantity: {{ product.quantity }}</p>
+    <div class="product-buttons">
+      <button class="btn btn-delete" (click)="deleteProduct(product.id)">Delete</button>
+      <button class="btn btn-view" [routerLink]="['/products', product.id]">View</button>
+      <button class="btn btn-edit" [routerLink]="['/products/edit', product.id]">Edit</button>
+    </div>
+  </div>
+  <button class="btn btn-add" [routerLink]="['/products/new']">Add New Product</button>
+</div>
